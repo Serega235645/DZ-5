@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https:/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+    $(function () {
+        $('#d1, #d2').dialog({
+            autoOpen: false,
+            position: ["right", "top"]
+        }).filter('#d2').dialog('option', 'position', ['right', 'bottom'])
+
+        $('#btn1, #btn2').button().click(function (e) {
+            var target = this.id == "btn1" ? "#d1" : "#d2";
+            if ($(target).dialog("isOpen")) {
+                $(target).dialog('close')
+            } else {
+                $(target).dialog('open')
+            }
+        })
+
+        $('#d2, #d3').dialog({
+            autoOpen: false,
+            position: ["right", "top"]
+        }).filter('#d3').dialog('option', 'position', ['right', 'bottom'])
+
+        $('#btn2, #btn3').button().click(function (e) {
+            var target = this.id == "btn2" ? "#d2" : "#d3";
+            if ($(target).dialog("isOpen")) {
+                $(target).dialog('close')
+            } else {
+                $(target).dialog('open')
+            }
+        })
+
+        $('#d2, #d4').dialog({
+            autoOpen: false,
+            position: ["right", "top"]
+        }).filter('#d4').dialog('option', 'position', ['right', 'bottom'])
+
+        $('#btn2, #btn4').button().click(function (e) {
+            var target = this.id == "btn2" ? "#d2" : "#d4";
+            if ($(target).dialog("isOpen")) {
+                $(target).dialog('close')
+            } else {
+                $(target).dialog('open')
+            }
+        })
+
+        $('#d2, #d5').dialog({
+            autoOpen: false,
+            position: ["right", "top"]
+        }).filter('#d5').dialog('option', 'position', ['right', 'bottom'])
+
+        $('#btn2, #btn5').button().click(function (e) {
+            var target = this.id == "btn2" ? "#d2" : "#d5";
+            if ($(target).dialog("isOpen")) {
+                $(target).dialog('close')
+            } else {
+                $(target).dialog('open')
+            }
+        })
+    });
+</script>
+</head>
+<body>
+    <div id="d1" title="Михаил Пономарев" class="ui-widget">
+        <img src="https://static.wikia.nocookie.net/molodeshkactc/images/2/20/74234821b93a1ccf9a440efeb61a3118.png/revision/latest/scale-to-width-down/283?cb=20170306152348&path-prefix=ru"alt="">
+        один из главных героев сериала «Молодежка». Женат на Алине Морозовой.
+
+        В прошлом игрок хоккейной команды МХЛ «Титан», игрок молодежной сборной России по хоккею, игрок хоккейного клуба КХЛ «Ак Барс», игрок хоккейного клуба МХЛ «Ледяные короли», игрок хоккейного клуба ВХЛ «Бурые медведи». В настоящем игрок хоккейного клуба КХЛ «Бурые медведи».
+    </div>
+    <button id="btn1">Михаил Пономарев</button> 
+    
+    <div id="d3" title="Семён Бакин" class="ui-widget">
+        <img src="https://static.wikia.nocookie.net/molodeshkactc/images/7/7b/Semen-bakin-b.jpg/revision/latest/scale-to-width-down/283?cb=20170306142402&path-prefix=ru"alt="">
+        один из главных героев сериала «Медведи».
+
+        Один из лучших вратарей в МХЛ. Женат на Рите Новиковой. Часто Семен бывает немного неуклюжим и поэтому забавным.
+    </div>
+    <button id="btn3">Семён Бакин</button>
+    
+    <div id="d4" title="Егор Щукин" class="ui-widget">
+        <img width="200px" src="https://static.wikia.nocookie.net/molodeshkactc/images/0/07/Aleksandr-sokolovskij25.jpg/revision/latest?cb=20210209145518&path-prefix=ru" alt="">
+        один из центральных персонажей в сериале «Молодёжка». Старший брат Дмитрия Щукина и муж Марины Касаткиной.
+
+В прошлом капитан хоккейного клуба «Медведи», игрок хоккейного клуба МХЛ «Титан», после травмы позвоночника тренировал любительскую команду Nivea Men. В шестом сезоне является тренером детской команды «Медведи» .
+    </div>
+    <button id="btn4">Егор Щукин</button>
+    
+    <div id="d5" title="Антон Антипов" class="ui-widget">
+        <img width="200px" src="https://static.wikia.nocookie.net/molodeshkactc/images/e/ef/DhheOEqqcDo.jpg/revision/latest?cb=20170306140757&path-prefix=ru" alt="">
+        
+        один из центральных персонажей в сериале «Молодежка», игрок хоккейного клуба ВХЛ «Металлист». Женат на Ольге Антиповой, воспитывает дочь Антонину. Имеет вспыльчивый характер из-за чего он и в частности команда страдает на Турнирах.
+    </div>
+    <button id="btn5">Антон Антипов</button>    
+</body>
+</html>
